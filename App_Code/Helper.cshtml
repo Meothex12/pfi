@@ -1,0 +1,174 @@
+﻿@helper ImageUploader(int id, string imageSrc, string controlId = "ImageControl", string waitingImage = "", string TooltipMessage = "", string ToolTipPlacement = "bottom")
+{
+    var Url = new System.Web.Mvc.UrlHelper(HttpContext.Current.Request.RequestContext);
+    imageSrc = Url.Content(imageSrc);
+    controlId = Url.Content(controlId);
+    waitingImage = Url.Content(waitingImage);
+    <fieldset>
+        <div class='imageUploader' id='@id' controlId='@controlId' imageSrc='@imageSrc' waitingImage='@waitingImage'
+             data-toggle="tooltip"
+             data-placement="@ToolTipPlacement"
+             title="@TooltipMessage"> </div>
+    </fieldset>
+}
+
+@helper AvatarProfilLink(pfi.Models.UserView user)
+{
+    var Url = new System.Web.Mvc.UrlHelper(HttpContext.Current.Request.RequestContext);
+    var avatarUrl = Url.Content(user.GetAvatarURL());
+    var linkUrl = Url.Action("Profil", "Users");
+    <a href="@linkUrl" data-toogle="tooltip" title="Modifier le profil">
+        <div class="smallAvatar"
+             style="background: url(@avatarUrl) no-repeat center center; background-size: cover;"></div>
+        <span class="menuTitle">&nbsp;@user.FullName</span>
+    </a>
+}
+@helper AvatarUser(pfi.Models.UserView user)
+{
+    var Url = new System.Web.Mvc.UrlHelper(HttpContext.Current.Request.RequestContext);
+    var avatarUrl = Url.Content(user.GetAvatarURL());
+    <div>
+        <div class="smallAvatar"
+             style="background: url(@avatarUrl) no-repeat center center; background-size: cover; float:left;"></div>
+        <span>&nbsp;@user.FullName</span>
+    </div>
+    <br />
+}
+
+@helper ParseContent(string content)
+{
+    string[] tokens = content.Split(' ');
+    foreach (var token in tokens)
+    {
+        var t = token.ToLower();
+        if (t.Contains("http://") || t.Contains("https://"))
+        {
+            if (t.Contains(".jpg") || t.Contains(".png") || t.Contains(".bmp"))
+            {
+                <a href="@token" target="_blank">
+                    <img class="contentImage" src="@token" alt="" />
+                </a>
+            }
+            else
+            {
+                <a href="@token" target="_blank">@token</a>
+            }
+        }
+        else
+        {
+            <span>@token</span>
+        }
+    }
+}
+
+@helper GlyphiconAction(string url, string Action, string glyphiconClass, string TooltipMessage, string ToolTipPlacement = "bottom")
+{
+    var Url = new System.Web.Mvc.UrlHelper(HttpContext.Current.Request.RequestContext);
+    <a href="@Url.Action(Action)">
+        <span class="glyphicon glyphiconStyle @glyphiconClass"
+              title="@TooltipMessage"
+              data-placement="@ToolTipPlacement">
+        </span>
+    </a>
+}
+
+@helper FlashButton(string Action, string Icon, string TooltipMessage, string ToolTipPlacement = "bottom")
+{
+    var Url = new System.Web.Mvc.UrlHelper(HttpContext.Current.Request.RequestContext);
+    <a href="@Url.Action(Action)" class="noUnderLine">
+        <div class="@Icon flashButton" data-toggle="tooltip"
+             data-placement="@ToolTipPlacement"
+             title="@TooltipMessage"></div>
+    </a>
+}
+
+
+@helper FlashButton(string Action, string Controller, string Icon, string TooltipMessage, string ToolTipPlacement = "bottom")
+{
+    var Url = new System.Web.Mvc.UrlHelper(HttpContext.Current.Request.RequestContext);
+    <a href="@Url.Action(Action, Controller)" class="noUnderLine">
+        <div class="@Icon flashButton" data-toggle="tooltip"
+             data-placement="@ToolTipPlacement"
+             title="@TooltipMessage"></div>
+    </a>
+}
+
+@helper SelectionLists(List<pfi.Models.ListItem> selectedItems, List<pfi.Models.ListItem> items)
+{
+    <div class="selectionsGrid">
+        <div>
+            <select id='SelectedItems' name='SelectedItems' size='12' multiple class='form-control'>
+                @foreach (pfi.Models.ListItem si in selectedItems)
+                {
+                    <option value='@si.Id'>@si.Text</option>
+                }
+            </select>
+        </div>
+        <div>
+            <div id="MoveLeft" class="iconLeft flashButton" data-toggle="tooltip" data-placement="top" title="Ajouter">Ajouter</div>
+            <div id="MoveRight" class="iconRight flashButton" data-toggle="tooltip" data-placement="bottom" title="Retirer">Retirer</div>
+        </div>
+        <div>
+            <select id='UnselectedItems' size='12' multiple class='form-control'>
+                @foreach (pfi.Models.ListItem ui in items)
+                {
+                    bool found = false;
+                    foreach (pfi.Models.ListItem si in selectedItems)
+                    {
+                        if (si.Id == ui.Id)
+                        {
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (!found)
+                    {
+                        <option value='@ui.Id'>@ui.Text</option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+}
+
+
+@helper SortAction(string Action, string fieldCaption, string RecordName, string fieldName)
+{
+    var Url = new System.Web.Mvc.UrlHelper(HttpContext.Current.Request.RequestContext);
+
+    var sortIcon = Url.Content("~/Content/UI_Images/Sort.png");
+    var sortAscIcon = Url.Content("~/Content/UI_Images/SortAsc.png");
+    var sortDescIcon = Url.Content("~/Content/UI_Images/SortDesc.png");
+
+    <a href="@Url.Action(Action, new { by = fieldName })" style="float:left">
+        @if ((string)Session[RecordName + "SortBy"] == fieldName)
+        {
+            if ((bool)Session[RecordName + "SortAscendant"])
+            {
+                <img src='@sortAscIcon' data-toggle="tooltip" data-placement="bottom" title="Trier" style="padding-right:4px;" class="Sort_Icon" />
+            }
+            else
+            {
+                <img src='@sortDescIcon' data-toggle="tooltip" data-placement="bottom" title="Trier" style="padding-right:4px;" class="Sort_Icon" />
+            }
+        }
+        else
+        {
+            <img src='@sortIcon' data-toggle="tooltip" data-placement="bottom" title="Trier" style="padding-right:4px;" class="Sort_Icon" />
+        }
+    </a>
+    @(new HtmlString(fieldCaption))
+}
+
+@helper RatingBar(string fieldName, double value = 0, bool readOnly = false)
+{
+    int integer = (int)Math.Round(value);
+    if (readOnly)
+    {
+        <input name="@fieldName" id="@fieldName" value=@integer class="RatingBar" disabled style="width:0px;display:none" />
+    }
+    else
+    {
+        <input name="@fieldName" id="@fieldName" value=@integer class="RatingBar" style="width:0px;display:none" />
+    }
+}

@@ -1,0 +1,58 @@
+﻿@model pfi.Models.ActorView
+
+@{
+    ViewBag.Title = "Retrait de" + Model.Name;
+}
+
+<div>
+    <h2>Retrait de @Model.Name</h2>
+    @Helper.GlyphiconAction("", "Index", "glyphicon glyphiconStyle glyphicon-arrow-left", "Retour")
+</div>
+<hr />
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.Name)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Name)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.CountryId)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.CountryId)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.BirthDate)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.BirthDate)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Sexe)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Sexe)
+    </dd>
+
+    <dd>
+        @* image de l'acteur *@
+    </dd>
+
+</dl>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Effacer" class="btn btn-danger" /> 
+    </div>
+}

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<pfi.Models.FilmView>
+@{
+    pfi.Models.UserView onlineUser = pfi.Models.OnlineUsers.CurrentUser;
+}
+@{
+    ViewBag.Title = "FILMS";
+}
+<div>
+    @if ((bool)ViewBag.ShowCrudCommand && (bool)onlineUser.Admin)
+    {
+        <h3>
+            Ajouter un film
+            @Helper.GlyphiconAction("", "Create", "glyphicon glyphicon-plus", "Ajouter")
+        </h3>
+    }
+</div>
+
+<table class="table">
+    <tr>
+        @foreach (var item in Model)
+        {
+            <td class="container">
+                <table>
+                    <tr style="text-align:center">
+                        <td>
+                            <b>@item.Title</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="divPhoto">
+                            <a href="~/Films/Details/@item.Id">
+                                <img class="" src="@Url.Content(@item.GetPosterURL())" />
+                            </a>
+                        </td>
+                    </tr>
+                    @if ((bool)ViewBag.ShowCrudCommand && onlineUser.Admin)
+                    {
+                        <tr style="text-align:center">
+                            <td>
+                                @Helper.GlyphiconAction("", "../Films/Edit/" + item.Id, "glyphicon glyphicon-edit", "Modifier", "left")
+                                @Helper.GlyphiconAction("", "../Films/Delete/" + item.Id, "glyphicon glyphicon-remove", "Effacer", "left")
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </td>
+        }
+    </tr>
+
+</table>

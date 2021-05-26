@@ -1,0 +1,55 @@
+﻿@model IEnumerable<pfi.Models.ActorView>
+
+@{
+    pfi.Models.UserView onlineUser = pfi.Models.OnlineUsers.CurrentUser;
+}
+
+@if ((bool)ViewBag.ShowCrudCommand && onlineUser.Admin)
+{
+    <h3>
+        Ajouter un acteur
+        @Helper.GlyphiconAction("", "Create", "glyphicon glyphicon-plus", "Ajouter")
+    </h3>
+}
+<table class="table" style="margin-left:50px">
+    <tr>
+        <td>
+            <h2>Acteurs</h2>
+        </td>
+    </tr>
+    <tr>
+
+        @foreach (var item in Model)
+        {
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="~/Actors/Details/@item.Id">
+                                <img class="photoMedium" src="@Url.Content(item.GetPhotoURL())" />
+                            </a>
+                        </td>
+
+                        @if ((bool)ViewBag.ShowCrudCommand && onlineUser.Admin)
+                        {
+                            <td>
+                                @Helper.GlyphiconAction("", "../Actors/Edit/" + item.Id, "glyphicon glyphicon-edit", "Modifier", "left")
+                            </td>
+                            <td>
+                                @Helper.GlyphiconAction("", "../Actors/Delete/" + item.Id, "glyphicon glyphicon-remove", "Effacer", "left")
+                            </td>
+                        }
+                    </tr>
+                </table>
+            </td>
+
+        }
+    </tr>
+
+
+</table>

@@ -1,0 +1,181 @@
+﻿Afghanistan;Afghan-e;pachtou, dari, ouzbek
+Afrique du Sud;Sud-Africain-e;afrikaans, anglais
+Albanie;Albanais-e;albanais
+Algérie;Algérien-ne;arabe
+Allemagne;Allemand-e;allemand
+Andorre;Andorran-e;catalan
+Angola;Angolais-e;portugais
+Arabie Saoudite;Saoudien-ne;arabe
+Argentine;Argentin-e;espagnol
+Arménie;Arménien-ne;arménien
+Aruba;Arubain-ne;néerlandais, papiamento
+Australie;Australien-ne;anglais
+Autriche;Autrichien-ne;allemand
+Azerbaïdjan;Azerbaïdjanais-e;azéri-turc
+Bahamas;Bahamien-ne;anglais
+Bahreïn;Bahreïnien-ne;arabe
+Bangladesh;Bangladais-e, Bangladeshi-e;bengali
+Barbade;Barbadien-ne;anglais
+Biélorussie / Bélarus;Biélorusse;biélorusse, russe
+Birmanie;Birman-e;birman
+Belgique;Belge;français,néerlandais,allemand
+Belize;Bélizien-ne;anglais
+Bénin;Béninois-e;français
+Bermudes;Bermudien-ne;anglais
+Bhoutan;Bhoutanais-e;tibétain dzongkha
+Bolivie;Bolivien-ne;espagnol
+Bosnie-Herzégovine;Bosniaque, Bosnien-ne;serbo-croate
+Botswana;Botswanais-e, Botswanéen-ne;anglais
+Brésil;Brésilien-ne;portugais
+Brunéi;Brunéien-ne;malais
+Bulgarie;Bulgare;bulgare
+Burkina Faso;Burkinabé-e, Burkinais-e;français
+Burundi;Burundais-e;kirundi, français
+Cameroun;Camerounais-e;anglais, français
+Canada;Canadien-ne;anglais, français
+Cap-Vert;Cap-Verdien-ne;portugais
+Rép. centrafricaine;Centrafricain-e;français, sango
+Chili;Chilien-ne;espagnol
+Chine;Chinois-e;chinois mandarin
+Chypre;Chypriote, Cypriote;turc, grec, anglais
+Colombie;Colombien-ne;espagnol
+Comores;Comorien-ne;français
+Rép. du Congo;Congolais-e;français
+Rép. dém. du Congo;Congolais-e;français
+Corée du Nord;Nord-Coréen-ne;coréen
+Corée du Sud;Sud-Coréen-ne;coréen
+Costa Rica;Costaricain-e, Costaricien-ne;espagnol
+Côte d’Ivoire;Ivoirien-ne;français
+Croatie;Croate;croate
+Cuba;Cubain-e;espagnol
+Danemark;Danois-e;danois
+Djibouti;Djiboutien-ne;arabe, français
+Dominique;Dominiquais-e;anglais
+Égypte;Égyptien-ne;arabe
+Émirats arabes unis;Émirien-ne;arabe
+Équateur;Équatorien-ne;espagnol
+LÉrythrée;Érythréen-ne;tigrina, arabe
+Espagne;Espagnol-e;espagnol
+Estonie;Estonien-ne;estonien
+États-Unis;Américain-e;anglais
+Éthiopie;Éthiopien-ne;amharique
+Fidji;Fidjien-ne;fidjien, anglais
+Finlande;Finlandais-e;finnois
+France;Français-e;français
+Gabon;Gabonais-e;français
+Gambie;Gambien-ne;anglais
+Géorgie;Géorgien-ne;géorgien
+Ghana;Ghanéen-ne;anglais
+Gibraltar;Gibraltarien-ne;anglais
+Grèce;Grec - Grecque;grec
+Grenade;Grenadien-ne;anglais
+Guatemala;Guatémaltèque;espagnol
+Guinée;Guinéen-ne;français
+Guinée-Bissau;Bissau-Guinéen-ne;portugais
+Guinée équatoriale;Équato-Guinéen-ne;espagnol
+Guyana;Guyanais-e, Guyanien-ne;anglais
+Haïti;Haïtien-ne;créole, français
+Honduras;Hondurien-ne;espagnol
+Hongrie;Hongrois-e;hongrois
+Inde;Indien-ne;hindi, anglais
+Indonésie;Indonésien-ne;indonésien
+Iran;Iranien-ne;persan
+Irak;Irakien-ne, Iraquien-ne;arabe, kurde
+Irlande;Irlandais-e;irlandais, anglais
+Islande;Islandais-e;islandais
+Israël;Israélien-ne;hébreu
+Italie;Italien-ne;italien
+Jamaïque;Jamaïcain-e;anglais
+Japon;Japonais-e;japonais
+Jordanie;Jordanien-ne;arabe
+Kazakhstan;Kazakh(-e);kazakh, russe
+Kenya;Kenyan-e;swahili, anglais
+Kirghizistan;Kirghiz;kirghiz, russe
+Kiribati;Kiribatien-ne;anglais, gilbertien
+Koweït;Koweïtien-ne;arabe
+Kosovo;Kosovar-e;albanais, serbe
+Laos;Laotien-ne;lao
+Lesotho;Lesothan-e;sotho, anglais
+Lettonie;Letton-(n)e;letton
+Liban;Libanais-e;arabe
+Libéria;Libérien-ne;anglais
+Libye;Libyen-ne;arabe
+Liechtenstein;Liechtensteinois-e;allemand
+Lituanie;Lituanien-ne;lituanien
+Luxembourg;Luxembourgeois-e;all., français, luxembourgeois
+Macédoine;Macédonien-ne;macédonien
+Madagascar;Malgache;malgache, français
+Malaisie;Malaisien-ne;malais
+Malawi;Malawite, Malawien-ne;anglais, chichewa
+Maldives;Maldivien-ne;divehi
+Mali;Malien-ne;français
+Malte;Maltais-e;maltais, anglais
+Maroc;Marocain-e;arabe
+Maurice;Mauricien-ne;anglais, français
+Mauritanie;Mauritanien-ne;hassanya, français
+Mexique;Mexicain-e;espagnol
+Monaco;Monégasque;français
+Mongolie;Mongol-e;mongol
+Monténégro;Monténégrin-e;monténégrin
+Mozambique;Mozambicain-e;portugais
+Namibie;Namibien-ne;anglais
+Népal;Népalais-e;népalais
+Nicaragua;Nicaraguayen-ne;espagnol
+Niger;Nigérien-ne;français
+Nigéria;Nigérian-e;anglais
+Norvège;Norvégien-ne;norvégien
+Nouvelle-Zélande;Néo-Zélandais-e;anglais
+Oman;Omanais-e;arabe
+Ouganda;Ougandais-e;anglais
+Ouzbékistan;Ouzbek;ouzbek
+Pakistan;Pakistanais-e;ourdou, anglais
+Panama;Panaméen-ne;espagnol
+Papouasie-Nouvelle-Guinée;Papouasien-ne;anglais
+Paraguay;Paraguayen-ne;espagnol, guarani
+Pays-Bas;Néerlandais-e;néerlandais
+Pérou;Péruvien-ne;espagnol, quechua
+Philippines;Philippin-e;filipino, anglais
+Pologne;Polonais-e;polonais
+Porto Rico;Portoricain-e;espagnol, anglais
+Portugal;Portugais-e;portugais
+Qatar;Qatari-e, Qatarien-ne;arabe
+République dominicaine;Dominicain-e;espagnol
+République tchèque;Tchèque;tchèque
+Roumanie;Roumain-e;roumain
+Royaume-Uni;Britannique;anglais
+Russie;Russe;russe
+Rwanda;Rwandais-e;kinyarwanda,français,anglais
+St-Vincent-et-les-Grenadines;Saint-Vincentais-e, Grenadin-e;anglais
+Salvador;Salvadorien-ne;espagnol
+Sénégal;Sénégalais-e;français, wolof, peul, sérère
+Serbie;Serbe;serbe
+Sierra Leone;Sierra-Léonais-e;anglais
+Singapour;Singapourien-ne;ang.,mandarin,malais,tamoul
+Slovaquie;Slovaque;slovaque
+Slovénie;Slovène;slovène
+Somalie;Somalien-ne;somali, arabe
+Soudan;Soudanais-e;arabe
+Sri Lanka;Sri-Lankais-e;cingalais, tamoul
+Suède;Suédois-e;suédois
+Suisse;Suisse;allemand, français, italien
+Surinam;Surinamien-ne;néerlandais
+Swaziland;Swazi-e;anglais, swati
+Syrie;Syrien-ne;arabe
+Tadjikistan;Tadjik;tadjik
+Taïwan;Taïwanais-e;chinois mandarin, taïwanais
+Tanzanie;Tanzanien-ne;swahili, anglais
+Tchad;Tchadien-ne;français, arabe
+LaThaïlande;Thaïlandais-e;thaï
+Timor-Oriental;Est-Timorais-e;tétum, portugais
+Togo;Togolais-e;français
+Tunisie;Tunisien-ne;arabe
+Turkménistan;Turkmène;turkmène, russe
+Turquie;Turc - Turque;turc
+Tuvalu;Tuvaluan-e;tuvaluan, anglais
+Ukraine;Ukrainien-ne;ukrainien
+Uruguay;Uruguayen-ne;espagnol
+Venezuela;Vénézuélien-ne;espagnol
+Vietnam;Vietnamien-ne;vietnamien
+Yémen;Yéménite;arabe
+Zambie;Zambien-ne;anglais
+Zimbabwe;Zimbabwéen-ne;anglais, shona

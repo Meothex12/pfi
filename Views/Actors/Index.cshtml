@@ -1,0 +1,22 @@
+﻿@model IEnumerable<pfi.Models.ActorView>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Répertoire des acteurs</h2>
+<div id="ActorContainer" class="ActorContainer">
+    @{
+        ViewBag.ShowCrudCommand = true;
+        Html.RenderPartial("ActorsList", Model);
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryUI")
+    @Scripts.Render("~/bundles/partialRefresh")
+    @*<script>
+        $(() => { PartialRefresh("@Url.Action("ActorsList")","ActorContainer", 2); });
+    </script>*@
+}
+

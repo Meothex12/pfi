@@ -1,0 +1,66 @@
+﻿@model pfi.Models.ActorView
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@{
+    pfi.Models.UserView onlineUser = pfi.Models.OnlineUsers.CurrentUser;
+}
+
+<table>
+    <tr>
+        <td>
+            <h2>
+                @Helper.GlyphiconAction("", "Index", "glyphicon glyphiconStyle glyphicon-arrow-left", "Retour")
+                @Html.DisplayFor(model => model.Name)
+            </h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td>
+                        <img class="photoMedium" src="@Url.Content(Model.GetPhotoURL())" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Pays: @Html.DisplayFor(model => model.Country.Name)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Date de naissance:  @Html.DisplayFor(model => model.BirthDate, new { @Value = Model.BirthDate.ToString("dd-MMM-yyyy") })
+                    </td>
+                </tr>
+            </table>
+        </td>
+    
+        @if (onlineUser.Admin)
+        {
+            <td>
+                <p>
+                        @Helper.GlyphiconAction("", "Edit/" + Model.Id, "glyphicon glyphicon-edit", "Modifier", "left")
+                </p>
+            </td>
+            <td>
+                <p>
+                        @Helper.GlyphiconAction("", "Delete/" + Model.Id, "glyphicon glyphicon-remove", "Effacer", "left")
+                </p>
+            </td>
+        }
+    </tr>
+</table>
+
+
+<h2>Filmographie</h2>
+<div class="container">
+    @{
+        ViewBag.ShowCrudCommand = false;
+        Html.RenderPartial("~/Views/Films/FilmsList.cshtml", (IEnumerable<pfi.Models.FilmView>)ViewBag.Films);
+    }
+</div>
+
+

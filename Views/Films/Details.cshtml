@@ -1,0 +1,78 @@
+﻿@model pfi.Models.FilmView
+
+@{
+    ViewBag.Title = "Details";
+}
+@{
+    pfi.Models.UserView onlineUser = pfi.Models.OnlineUsers.CurrentUser;
+}
+
+<table>
+    <tr>
+        <td>
+            <h2>
+                @Helper.GlyphiconAction("", "Index", "glyphicon glyphiconStyle glyphicon-arrow-left", "Retour")
+                @Html.DisplayFor(model => model.Title)
+            </h2>
+        </td>
+    </tr>
+    <tr style="text-align:center">
+        @if (onlineUser.Admin)
+        {
+            <td style="margin:20px">
+                @Helper.GlyphiconAction("", "Edit/" + Model.Id, "glyphicon glyphicon-edit", "Modifier", "left")
+
+                @Helper.GlyphiconAction("", "Delete/" + Model.Id, "glyphicon glyphicon-remove", "Supprimer", "left")
+            </td>
+        }
+    </tr>
+</table>
+
+<div>
+    <hr />
+    <table class="container">
+        <tr>
+            <th>
+                @Html.DisplayFor(model => model.Title)
+            </th>
+        </tr>
+        <tr>
+            <td>
+                @Helper.RatingBar("Rating",Model.RatingsAverage,true) @Model.RatingsAverage / @Html.DisplayFor(model => model.NbRatings)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Synopsis)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Author),@Html.DisplayFor(model => model.Year),@Html.DisplayFor(model => model.Style.Name),@Html.DisplayFor(model => model.Audience.Name)
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <table>
+        <tr>
+            <!--Image du film-->
+            <td class="divPhoto">
+                <img src="@Url.Content(Model.GetPosterURL())" />
+            </td>
+            <!--Acteurs-->
+            <td>
+                @{
+                    ViewBag.ShowCrudCommand = false;
+                    Html.RenderPartial("~/Views/Actors/ActorsList.cshtml", (IEnumerable<pfi.Models.ActorView>)ViewBag.Actors);
+                }
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!--Évaluations-->
+@{    
+    Html.RenderPartial("~/Views/Films/Rating.cshtml", (IEnumerable<pfi.Models.RatingView>)ViewBag.Ratings,new ViewDataDictionary { {"Film",ViewData.Model } });
+}

@@ -1,0 +1,68 @@
+﻿@model pfi.Models.FilmView
+
+@{
+    ViewBag.Title = "Retrait de film";
+}
+
+<h3>
+    @Helper.GlyphiconAction("", "Index", "glyphicon glyphiconStyle glyphicon-arrow-left", "Retour")
+    Retrait de @Model.Title
+</h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Synopsis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Synopsis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+
+        <dt>
+            Évaluations :
+        </dt>
+        <dd>
+             @Html.DisplayFor(model => model.RatingsAverage) / @Html.DisplayFor(model => model.NbRatings)
+        </dd>
+    </dl>
+    <dl>
+        <dd>
+            <img src="@Url.Content(Model.GetPosterURL())" />
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Supprimer" class="btn btn-danger" /> 
+        </div>
+    }
+</div>
